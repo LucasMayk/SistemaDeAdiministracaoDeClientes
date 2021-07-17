@@ -9,7 +9,7 @@
 	construção, o projeto foi criado numa versão e pra não da nenhum erro de código estarei colocando
 	os coponentes.
 	
-	Quando clonar o projeto instala primeiro o JDK, descopacta o eclipse e adicionar o Tomcat
+	Quando clonar o projeto instala primeiro o JDK, descompacta o eclipse e adicionar o Tomcat
 	na parte do server e instalar o SQL Server vou colocar um tutoria num arquivo no Google Drive para
 	facilitar.
 	
