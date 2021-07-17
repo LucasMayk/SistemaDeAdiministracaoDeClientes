@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout/LayoutPadrao}"
+	xmlns:tempus="http://tempus.administracaoclientes.com"
+	xmlns:data="http://www.thymeleaf.org/extras/data">
+	
+<head>
+	<title>Dashboard</title>
+</head>
+
+<body>
+<section layout:fragment="conteudo">
+	<div class="page-header">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-10">
+					<h1>Dashboard</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="form-group  col-lg-12" id="upload-file">
+				<ul class="nav nav-tabs  js-abas-cliente" id="menu">
+				  <li role="presentation" class="active  selected"><a href="#mes">Mês</a></li>
+				  <li role="presentation"><a href="#semana">Semana</a></li>
+				  <li role="presentation"><a href="#hoje">Hoje</a></li>
+				</ul>	
+			</div>
+		</div>
+
+		<div class="tab-content">
+			<div class="tab-pane active" id="mes">
+				<div class="container-fluid">
+				  <div class="row">
+				    <div class="col-sm-3">
+				    
+				      <div class="aw-box">
+				        <div class="aw-box__icon">
+				          <i class="fa  fa-users  fa-3x"></i>
+				        </div>
+				        <div class="aw-box__value">00</div>
+				        <div class="aw-box__title">Quantidade de clientes maior que 18 anos por mês</div>
+				      </div>
+				    
+				    </div>
+				
+				    <div class="col-sm-3">
+				    
+				      <div class="aw-box">
+				        <div class="aw-box__icon">
+				          <i class="fa  fa-users  fa-3x"></i>
+				        </div>
+				        <div class="aw-box__value">00</div>
+				        <div class="aw-box__title">Quantidade de clientes da classe A por mês</div>
+				      </div>
+				    
+				    </div>
+				    
+				    <div class="col-sm-3">
+				    
+				      <div class="aw-box">
+				        <div class="aw-box__icon">
+				          <i class="fa  fa-users  fa-3x"></i>
+				        </div>
+				        <div class="aw-box__value">00</div>
+				        <div class="aw-box__title">Quantidade de clientes da classe B por mês</div>
+				      </div>
+				    
+				    </div>
+				    
+				    <div class="col-sm-3">
+				    
+				      <div class="aw-box">
+				        <div class="aw-box__icon">
+				          <i class="fa  fa-users  fa-3x"></i>
+				        </div>
+				        <div class="aw-box__value">00</div>
+				        <div class="aw-box__title">Quantidade de clientes da classe C por mês</div>
+				      </div>
+				    
+				    </div>
+				  </div>
+				 </div>
+			</div>
+				
+			<div class="tab-pane" id="semana">		
+				<div class="container-fluid">
+				  <div class="row">
+				    <div class="col-sm-3">
+				    
+				      <div class="aw-box">
+				        <div class="aw-box__icon">
+				          <i class="fa  fa-users  fa-3x"></i>
+				        </div>
+				        <div class="aw-box__value">00</div>
+				        <div class="aw-box__title">Quantidade de clientes maior que 18 anos por semana</div>
+				      </div>
+				    
+				    </div>
+				
+				    <div class="col-sm-3">
+				    
+				      <div class="aw-box">
+				        <div class="aw-box__icon">
+				          <i class="fa  fa-users  fa-3x"></i>
+				        </div>
+				        <div class="aw-box__value">00</div>
+				        <div class="aw-box__title">Quantidade de clientes da classe A por semana</div>
+				      </div>
+				    
+				    </div>
+				    
+				    <div class="col-sm-3">
+				    
+				      <div class="aw-box">
+				        <div class="aw-box__icon">
+				          <i class="fa  fa-users  fa-3x"></i>
+				        </div>
+				        <div class="aw-box__value">00</div>
+				        <div class="aw-box__title">Quantidade de clientes da classe B por semana</div>
+				      </div>
+				    
+				    </div>
+				    
+				    <div class="col-sm-3">
+				    
+				      <div class="aw-box">
+				        <div class="aw-box__icon">
+				          <i class="fa  fa-users  fa-3x"></i>
+				        </div>
+				        <div class="aw-box__value">00</div>
+				        <div class="aw-box__title">Quantidade de clientes da classe C por semana</div>
+				      </div>
+				    
+				    </div>
+				  </div>
+				 </div>
+			</div>
+			
+			<div class="tab-pane" id="hoje">	
+				<div class="container-fluid">
+				  <div class="row">
+				    <div class="col-sm-3">
+				    
+				      <div class="aw-box">
+				        <div class="aw-box__icon">
+				          <i class="fa  fa-users  fa-3x"></i>
+				        </div>
+				        <div class="aw-box__value">00</div>
+				        <div class="aw-box__title">Quantidade de clientes maior que 18 hoje</div>
+				      </div>
+				    
+				    </div>
+				
+				    <div class="col-sm-3">
+				    
+				      <div class="aw-box">
+				        <div class="aw-box__icon">
+				          <i class="fa  fa-users  fa-3x"></i>
+				        </div>
+				        <div class="aw-box__value">00</div>
+				        <div class="aw-box__title">Quantidade de clientes da classe A hoje</div>
+				      </div>
+				    
+				    </div>
+				    
+				    <div class="col-sm-3">
+				    
+				      <div class="aw-box">
+				        <div class="aw-box__icon">
+				          <i class="fa  fa-users  fa-3x"></i>
+				        </div>
+				        <div class="aw-box__value">00</div>
+				        <div class="aw-box__title">Quantidade de clientes da classe B hoje</div>
+				      </div>
+				    
+				    </div>
+				    
+				    <div class="col-sm-3">
+				    
+				      <div class="aw-box">
+				        <div class="aw-box__icon">
+				          <i class="fa  fa-users  fa-3x"></i>
+				        </div>
+				        <div class="aw-box__value">00</div>
+				        <div class="aw-box__title">Quantidade de clientes da classe C hoje</div>
+				      </div>
+				    
+				    </div>
+				  </div>
+				 </div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<th:block layout:fragment="javascript-extra">
+	<script>	
+		$(function() {
+			$('.js-abas-cliente a').click(function (e) {
+				e.preventDefault();
+				$(this).tab('show');
+			});
+		});
+	</script>
+</th:block>
+
+</body>
+</html>

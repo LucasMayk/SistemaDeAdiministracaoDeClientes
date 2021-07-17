@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:data="http://www.thymeleaf.org/extras/data"
+	xmlns:tempus="http://tempus.administracaoclientes.com"
+	layout:decorate="~{layout/LayoutPadrao}">
+
+<head>
+	<title>Cadastro de cliente</title>
+</head>
+
+<section layout:fragment="conteudo">
+
+	<div class="page-header">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-10">
+					<h1 th:if="${cliente.novo}">Cadastro de Cliente</h1>
+					<h1 th:unless="${cliente.novo}" th:text="|Edição do Cliente ${cliente.nome}|"></h1>
+				</div>
+				
+				<div class="col-xs-2">
+					<div class="aw-page-header-controls">
+						<a class="btn  btn-default" th:href="@{/clientes}">
+							<i class="glyphicon  glyphicon-plus-sign"></i> <span class="hidden-xs  hidden-sm">Pesquisar</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Div para o formulário de clientes -->
+	<div class="container-fluid">
+	
+		<th:block th:include="fragments/MensagensSucesso"></th:block>
+		
+		<form method="POST" th:object="${cliente}" 
+			th:action="${cliente.novo} ? @{/clientes/novo} : @{/clientes/{id}(id=${cliente.id})}">
+
+			<th:block th:include="fragments/MensagensErroValidacao"></th:block>
+			
+			<input type="hidden" th:field="*{id}"/>
+			
+			<div class="row">
+				<div class="form-group  col-sm-8  bw-required" tempus:classforerror="nome">
+					<label for="nome" class="control-label">Nome</label>
+					<input type="text" class="form-control" id="nome" autofocus="autofocus" 
+					th:field="*{nome}" maxlength="150" required/>
+				</div>
+				
+				<div class="form-group  col-sm-4" tempus:classforerror="cpf">
+					<label for="cpf" class="control-label">CPF</label>
+					<input type="text" class="form-control  js-cpf" id="cpf" th:field="*{cpf}"
+						max="11"/>
+				</div>
+			</div>
+			
+			<div class="row">			
+				<div class="form-group  col-sm-4  bw-required" tempus:classforerror="dataNascimento">
+					<label for="dataNascimento" class="control-label">Data de nascimento</label>
+					<input type="text" class="form-control  js-date" id="dataNascimento" 
+					th:field="*{dataNascimento}" autocomplete="off" maxlength="8" required/>
+				</div>
+				
+				<div class="form-group  col-sm-4">
+					<label for="dataCadastro" class="control-label">Data de Cadastro</label>
+					<input type="text" class="form-control  js-date" id="dataCadastro" 
+					 th:field="*{dataCadastro}" autocomplete="off" disabled/>
+				</div>
+				
+				<div class="form-group  col-sm-4">
+					<label for="rendaFamiliar" class="control-label">Renda familiar</label>
+					<div class="input-group">
+						<div class="input-group-addon">R$</div>
+						<input id="rendaFamiliar" type="text" class="form-control  js-decimal" 
+							th:field="*{rendaFamiliar}" min="0.00"/>
+					</div>
+				</div>
+			</div>
+			
+			<button type="submit" class="btn  btn-primary">Salvar</button>				
+		</form>
+	</div>
+</section>
+
+<!-- JavaScripts extras para a própria página -->
+<th:block layout:fragment="javascript-extra">
+</th:block>
+
+</html>
